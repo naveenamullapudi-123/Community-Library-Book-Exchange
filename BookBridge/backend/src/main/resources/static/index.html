@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#315c46">
+  <meta name="description" content="Share books with readers in your community.">
+  <title>BookBridge | Community Library</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#/dashboard" aria-label="BookBridge home">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span>Book<span class="brand-light">Bridge</span><small>COMMUNITY LIBRARY</small></span>
+      </a>
+      <div class="nav-group">
+        <p class="nav-label">EXPLORE</p>
+        <a href="#/dashboard" data-nav="dashboard"><span aria-hidden="true">⌂</span> Overview</a>
+        <a href="#/catalog" data-nav="catalog"><span aria-hidden="true">▤</span> Book catalog</a>
+        <a href="#/forum" data-nav="forum"><span aria-hidden="true">✳</span> Community forum</a>
+      </div>
+      <div class="nav-group signed-in-nav" hidden>
+        <p class="nav-label">YOUR LIBRARY</p>
+        <a href="#/bookshelf" data-nav="bookshelf"><span aria-hidden="true">▣</span> My bookshelf</a>
+        <a href="#/loans" data-nav="loans"><span aria-hidden="true">⇄</span> Borrowing & lending</a>
+        <a href="#/wishlist" data-nav="wishlist"><span aria-hidden="true">♡</span> Wishlist</a>
+        <a href="#/messages" data-nav="messages"><span aria-hidden="true">✉</span> Messages</a>
+        <a href="#/notifications" data-nav="notifications"><span aria-hidden="true">♧</span> Notifications <span class="nav-count" id="notification-count" hidden>0</span></a>
+        <a href="#/profile" data-nav="profile"><span aria-hidden="true">◎</span> My profile</a>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="signed-in-user" id="signed-in-user" hidden></div>
+        <a class="auth-nav" href="#/login" data-nav="login"><span aria-hidden="true">↗</span> Sign in</a>
+        <button class="logout-button" id="logout-button" type="button" hidden><span aria-hidden="true">↩</span> Sign out</button>
+        <p class="sidebar-note">A good book travels far.<br>Pass one on today.</p>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">B</span><strong>BookBridge</strong></div>
+        <div class="topbar-note">A little free library, shared by everyone.</div>
+        <div class="topbar-actions">
+          <a class="icon-link" href="#/notifications" aria-label="Notifications">♧<span class="mobile-notification-count" id="mobile-notification-count" hidden></span></a>
+          <a href="#/login" class="button button-small button-outline auth-nav">Sign in</a>
+          <span class="topbar-user" id="topbar-user" hidden></span>
+        </div>
+      </header>
+      <main id="main" tabindex="-1">
+        <div class="loading-state"><span class="spinner" aria-hidden="true"></span> Loading BookBridge…</div>
+      </main>
+      <footer class="site-footer">BookBridge · Share a story, strengthen a community.</footer>
+    </div>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="#/dashboard" data-nav="dashboard"><span aria-hidden="true">⌂</span>Home</a>
+    <a href="#/catalog" data-nav="catalog"><span aria-hidden="true">▤</span>Catalog</a>
+    <a class="mobile-signed-in" href="#/bookshelf" data-nav="bookshelf" hidden><span aria-hidden="true">▣</span>Shelf</a>
+    <a class="mobile-signed-out" href="#/forum" data-nav="forum"><span aria-hidden="true">✳</span>Forum</a>
+    <a class="mobile-signed-in" href="#/loans" data-nav="loans" hidden><span aria-hidden="true">⇄</span>Loans</a>
+    <a class="mobile-signed-out" href="#/login" data-nav="login"><span aria-hidden="true">↗</span>Sign in</a>
+    <a href="#/more" data-nav="more"><span aria-hidden="true">•••</span>More</a>
+  </nav>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
